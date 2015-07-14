@@ -15,10 +15,4 @@ class JsxProvider
     jstransform ?= require 'jstransform/simple'
     options = @defaultOptions()
     options.sourceMap = sourceMap if sourceMap?
-    result = jstransform.transform(code, options)
-
-    # NOTE: jstransform bug?
-    if result.sourceMap?.sources? and not Array.isArray(result.sourceMap.sources)
-      result.sourceMap.sources = [result.sourceMap.sources]
-
-    result
+    jstransform.transform(code, options)
