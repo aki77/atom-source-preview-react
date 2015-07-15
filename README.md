@@ -4,7 +4,7 @@ source-preview provider for react
 
 ## Settings
 
-* `harmony`: shortcut to enable ES6 & ES7 transforms (default: false)
+* `jsxHarmony`: shortcut to enable ES6 & ES7 transforms (default: false)
 
 ## Requirement
 

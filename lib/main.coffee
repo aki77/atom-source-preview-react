@@ -1,9 +1,10 @@
 JsxProvider = require './jsx-provider'
+CjsxProvider = require './cjsx-provider'
 
 module.exports =
 
   config:
-    harmony:
+    jsxHarmony:
       order: 1
       type: 'boolean'
       description: 'shortcut to enable ES6 & ES7 transforms'
@@ -11,9 +12,11 @@ module.exports =
 
   activate: ->
     @jsxProvider = new JsxProvider
+    @cjsxProvider = new CjsxProvider
 
   deactivate: ->
     @jsxProvider = null
+    @cjsxProvider = null
 
   provide: ->
-    @jsxProvider
+    [@jsxProvider, @cjsxProvider]

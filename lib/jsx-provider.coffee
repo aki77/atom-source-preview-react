@@ -8,7 +8,7 @@ class JsxProvider
   defaultOptions: ->
     {
       react: true
-      harmony: atom.config.get('source-preview-react.harmony')
+      harmony: atom.config.get('source-preview-react.jsxHarmony')
     }
 
   transform: (code, {sourceMap} = {}) ->
