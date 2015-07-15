@@ -5,6 +5,7 @@
   "description": "source-preview provider for react",
   "keywords": [
     "jsx",
+    "cjsx",
     "react"
   ],
   "repository": "https://github.com/aki77/atom-source-preview-react",
